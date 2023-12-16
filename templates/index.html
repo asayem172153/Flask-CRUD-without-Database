@@ -3,14 +3,14 @@
     <div class="container">
         <div class="my-5">
             <form action="/home" method="POST" >
-                <input  name="title"   type="text"  />
+                <input  name="model"   type="text"  />
                 <input type="submit" value="Add todo">
             </form>
         </div>
         <div>
             {% for todo in data %}
                 <div>
-                    <h3>{{todo.id}}-- {{todo.title}}</h3>
+                    <h3>{{todo.id}}. {{todo.model_name}}</h3>
                     <div>
                         <a href="/remove/{{todo.id}}" class="btn btn-danger" >Delete</a>
                         <a href="/update/{{todo.id}}" class="btn btn-info" >Update</a>
